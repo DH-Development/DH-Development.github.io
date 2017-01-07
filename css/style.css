@@ -31,6 +31,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 	outline: 0;
 	padding: 0;
 	vertical-align: baseline;
+        border-style: hidden;
 }
 :focus {/* remember to define focus styles! */
 	outline: 0;
@@ -63,6 +64,14 @@ a img {
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
+}
+article header {
+    width: 100%;
+    font-size: 24px;
+    font-weight: bold;
+}
+article {
+    padding-top: 2.5em;
 }
 
 
@@ -521,7 +530,7 @@ a:hover {
 #site-title a:hover,
 #site-title a:focus,
 #site-title a:active {
-	color: #1982d1;
+	color: #2b88bf;
 }
 #site-description {
 	color: #7a7a7a;
@@ -772,7 +781,6 @@ a:hover {
 }
 .entry-content table,
 .comment-content table {
-	border-bottom: 1px solid #ddd;
 	margin: 0 0 1.625em;
 	width: 100%;
 }
@@ -787,7 +795,6 @@ a:hover {
 }
 .entry-content td,
 .comment-content td {
-	border-top: 1px solid #ddd;
 	padding: 6px 10px 6px 0;
 }
 .entry-content #s {
@@ -2240,7 +2247,7 @@ p.comment-form-comment {
 }
 
 /* Site Generator Line */
-#site-generator {
+#site-owner {
 	background: #f9f9f9;
 	border-top: 1px solid #ddd;
 	color: #666;
@@ -2249,7 +2256,7 @@ p.comment-form-comment {
 	padding: 2.2em 0.5em;
 	text-align: center;
 }
-#site-generator a {
+#site-owner a {
 	color: #555;
 	font-weight: bold;
 }
