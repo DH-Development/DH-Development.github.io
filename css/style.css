@@ -31,26 +31,6 @@ body {
     padding: 0 2em;
     background: #e2e2e2;
 }
-#page {
-    margin: 2em auto;
-    max-width: 1000px;
-    background: #fff;
-}
-#branding hgroup {
-    margin: 0 10%;
-}
-#content {
-    margin: 0 7.5%;
-    position: relative;
-    width: auto;
-}
-.entry-header, .entry-content, #comments-title {
-    margin: 0 auto;
-    width: 70%;
-}
-.entry-content {
-    padding: 1.25em 0 0;
-}
 body, input, textarea {
     color: #373737;
     font: 15px "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -69,11 +49,6 @@ hr {
     height: 1px;
     margin-bottom: 1em;
     background: #c7c7c7;
-}
-header#branding hr {
-    height: 2em;
-    background: linear-gradient(0deg, black, #555);
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px;
 }
 p {
     margin-bottom: 1.125em;
@@ -133,11 +108,32 @@ a {
 a:focus, a:active, a:hover {
     text-decoration: underline;
 }
+#page {
+    margin: 2em auto;
+    max-width: 1000px;
+    background: #fff;
+}
 #branding {
     border-top: 2px solid #bbb;
     padding-bottom: 10px;
     position: relative;
     z-index: 9999;
+}
+#branding hgroup {
+    margin: 0 10%;
+}
+#branding img {
+    height: auto;
+    margin-bottom: 7px;
+    width: 90%;
+}
+#branding::after {
+    content: '';
+    display: block;
+    height: 2em;
+    background: linear-gradient(0deg, black, #555);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px;
+    margin: 0.5em 0 1em 0;
 }
 #site-title {
     margin-right: 270px;
@@ -159,32 +155,30 @@ a:focus, a:active, a:hover {
     margin: 0 270px 1.25em 0;
     font-weight: normal;
 }
-#branding img {
-    height: auto;
-    margin-bottom: 7px;
-    width: 90%;
-}
-
 #main {
     clear: both;
 }
-.page-title {
-    color: #666;
-    font-size: 10px;
-    font-weight: 500;
-    letter-spacing: 0.1em;
-    line-height: 2.6em;
-    margin: 0 0 2.6em;
-    text-transform: uppercase;
+#content {
+    margin: 0 7.5%;
+    position: relative;
+    width: auto;
+}
+.entry-header, .entry-content {
+    margin: 0 auto;
+    width: 70%;
+}
+.entry-content {
+    padding: 1.25em 0 0;
+}
+#contact td p {
+    padding-left: 15px;
+    font-style: italic;
 }
 article header h1 {
-  clear: both;
-  color: #222;
-  font-size: 26px;
-  font-weight: bold;
-  line-height: 1.5em;
-  padding-bottom: .3em;
-  padding-top: 15px;
+    font-size: 26px;
+    font-weight: bold;
+    color: #222;
+    padding-top: 1em;
 }
 .entry-content table {
     margin: 0 0 1.625em;
@@ -200,6 +194,7 @@ article header h1 {
 }
 .entry-content td {
     padding: 6px 10px 6px 0;
+    border-style: hidden;
 }
 #colophon {
     clear: both;
@@ -223,7 +218,7 @@ article header h1 {
         margin: 5% 17.5%;
         width: auto;
     }
-    .singular .entry-header, .singular .entry-content {
+    .entry-header, .entry-content {
         width: 100%;
     }
 }
@@ -239,9 +234,6 @@ article header h1 {
         font-size: 12px;
     }
     .entry-title {
-        font-size: 21px;
-    }
-    .singular .entry-title {
         font-size: 28px;
     }
     #site-title {
